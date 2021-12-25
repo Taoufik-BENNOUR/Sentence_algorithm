@@ -1,0 +1,29 @@
+
+ALGORITHM checking
+VAR
+   sentence:STRING:='Are you ready.';
+    count,i,vowels,len:INTEGER;
+   c:CHAR;
+BEGIN   
+ count:=1;
+ vowels:=0;
+ len:=0
+    IF (sentence[length(sentence)-1]='.') THEN
+            FOR i FROM 0 TO length(sentence) STEP step  DO
+                c:=sentence[i]
+                 IF (c=' ') THEN
+                     count:=count+1;
+                     len=length(sentence)+count+1;
+                 END_IF   
+                 IF (c='a') or (c='e') or (c='i') or (c='o') or (c='u') or (c='A') or (c='E') or (c='I') or (c='O') or (c='U') THEN
+                     vowels:=vowels+1;
+                 END_IF
+            END_FOR
+        ELSE 
+        IF
+        writeln('sentence should end with period')    
+    END_IF
+ writeln('length of the string ',len));
+ writeln('Number of words ',count);
+ writeln('Number of vowels ',vowels);
+END

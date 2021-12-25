@@ -13,7 +13,7 @@ BEGIN
                 c:=sentence[i]
                  IF (c=' ') THEN
                      count:=count+1;
-                     len=length(sentence)+count+1;
+                     len:=length(sentence)+count+1;
                  END_IF   
                  IF (c='a') or (c='e') or (c='i') or (c='o') or (c='u') or (c='A') or (c='E') or (c='I') or (c='O') or (c='U') THEN
                      vowels:=vowels+1;

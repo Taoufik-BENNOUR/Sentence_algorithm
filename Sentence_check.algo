@@ -2,7 +2,7 @@
 ALGORITHM checking
 VAR
    sentence:STRING:='Are you ready.';
-    count,i,vowels,len:INTEGER;
+    count,i,vowels:INTEGER;
    c:CHAR;
 BEGIN   
  count:=1;
@@ -13,7 +13,7 @@ BEGIN
                 c:=sentence[i]
                  IF (c=' ') THEN
                      count:=count+1;
-                     len:=sentence.length-count+1;
+                    
                  END_IF   
                  IF (c='a') or (c='e') or (c='i') or (c='o') or (c='u') or (c='A') or (c='E') or (c='I') or (c='O') or (c='U') THEN
                      vowels:=vowels+1;
@@ -23,7 +23,7 @@ BEGIN
         IF
         writeln('sentence should end with period')    
     END_IF
- writeln('length of the string ',len));
+ writeln('length of the string ',sentence.length-count));
  writeln('Number of words ',count);
  writeln('Number of vowels ',vowels);
 END
